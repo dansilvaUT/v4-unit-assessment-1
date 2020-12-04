@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.headline {
+    background-color: mediumspringgreen;
+    margin: 0;
+    padding: 50px;
+}
+
+/*RECTANGLE STYLES*/
+
+.rectangle-div,
+.circle-div,
+.everything-div {
+    border: 1px dotted black;
+    margin: 10px 5px;
+    box-sizing: border-box;
+}
+
+.rectangle-div div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.square-1 {
+    height: 50px;
+    width: 100px;
+    background-color: purple;
+    border: 2px solid red;
+}
+
+.square-2 {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border: 1px solid black;
+    box-shadow: 6px 6px 5px black;
+}
+
+.square-3 {
+    width: 120px;
+    height: 120px;
+    background-color: pink;
+    border: 1px solid black;
+}
+
+/*CIRCLE STYLES*/
+.circle-div {
+    padding: 10px;
+}
+.top, 
+.middle,
+.bottom {
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.top {
+    background-image: url("https://www.clipartkey.com/mpngs/m/68-687063_cute-printable-snowman-face.png");
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    margin-left: 25px;
+}
+
+.middle {
+    background-image: url('https://lh3.googleusercontent.com/proxy/kY-fgeiRhk3DQNypAAcgjrCFMYSZcK4WvCeq3j8VTY1kjyBPipHBxcAwAxF_iAFt3Mi_u0XoGJfvQgFaMk16');
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+}
+
+.bottom {
+    height: 110px;
+    width: 110px;
+}
+
+/* EVERTYTHING STYLES*/
+
+.everything-div {
+    padding: 5px;
+}
+
+.outter {
+    height: 150px;
+    width: 150px;
+    background-color: blanchedalmond;
+}
+
+.inner-outter {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    padding-top:10px;
+}
+
+.outter,
+.inner-outter {
+    border: 1px solid black;
+}
+
+.inner-outter,
+.tank {
+    border-radius: 100px;
+}
+
+.inner {
+    height: 60px;
+    width: 60px;
+    background-color: darkred;
+    margin: 0 auto;
+}
+
+.tank {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    background-image: url('https://freesvg.org/img/CartoonFish.png');
+    background-size: cover;
+}
+
+.inner p {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 10px;
+}
