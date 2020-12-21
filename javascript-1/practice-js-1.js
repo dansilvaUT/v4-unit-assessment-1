@@ -2,17 +2,17 @@
 /* Create a variable called 'myName' with a value that is your name as a string. */
 
 //CODE HERE 
-const myName = "Daniel Silva";
+const myName = 'Daniel';
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
 //CODE HERE
-const faveNum = 13;
+let faveNum = 13;
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
 
 //CODE HERE
-let lovesCode = true;
+const lovesCode = true;
 //////////////////PROBLEM 4////////////////////
 /*
   Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. 
@@ -20,7 +20,7 @@ let lovesCode = true;
 */
 
 //CODE HERE
-function sum(num1, num2) {
+const sum = (num1, num2) => {
   return num1 + num2;
 }
 //////////////////PROBLEM 5////////////////////
@@ -32,12 +32,8 @@ function sum(num1, num2) {
 */
 
 //CODE HERE
-function trueOrFalse(data) {
-  if (data) {
-    return true;
-  } else {
-    return false;
-  }
+const trueOrFalse = data => {
+  return data ? true : false;
 }
 //////////////////PROBLEM 6////////////////////
 /*
@@ -48,11 +44,11 @@ function trueOrFalse(data) {
 */
 
 //CODE HERE
-function oddChecker(num) {
-  if (num % 2 !== 0) {
-    return `the number is odd`;
-  } else {
+const oddChecker = num => {
+  if (num % 2 === 0) {
     return `the number is even`;
+  } else {
+    return `the number is odd`;
   }
 }
 //////////////////PROBLEM 7////////////////////
@@ -63,7 +59,7 @@ function oddChecker(num) {
 */
 
 //CODE HERE
-function iLove(name, love) {
+const iLove = (name, love) => {
   return `${name} loves ${love}`;
 }
 
@@ -105,11 +101,11 @@ const middleNums = numbers.slice(1, 4);
 
 //CODE HERE
 const me = {
-  firstName: "Daniel",
-  state: "Nevada",
+  firstName: 'Dan',
+  state: 'UT',
   age: 30,
-  greeter: function () {
-    return `Hello! my name is ${me.firstName} and I live in ${me.state}`;
+  greeter: () => {
+    return `Hello! My name is ${firistName} and I live in ${state}`;
   }
 }
 //////////////////PROBLEM 12////////////////////
@@ -126,13 +122,12 @@ const me = {
 */
 
 // CODE HERE
-function bigOrSmall(arr) {
+const bigOrSmall = arr => {
   const answers = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 100) {
       answers.push('big');
-    }
-    if (arr[i] <= 100) {
+    } else {
       answers.push('small');
     }
   }
@@ -149,7 +144,7 @@ function bigOrSmall(arr) {
 */
 
 //CODE HERE
-function arrayReverser(arr) {
+const arrayReverser = arr => {
   const reversed = [];
   for (let i = arr.length - 1; i >= 0; i--) {
     reversed.push(arr[i]);
@@ -199,7 +194,7 @@ let secondFunctionScope = ['global', 'functional']
 */
 
 //CODE HERE
-function firstItem(arr, cb) {
+const firstItem = (arr, cb) => {
   return cb(arr[0]);
 }
 //////////////////PROBLEM 16////////////////////
@@ -211,12 +206,8 @@ function firstItem(arr, cb) {
 */
 
 //CODE HERE
-function isItBob(obj, cb) {
-  if (obj.name === 'Bob') {
-    return cb(true);
-  } else {
-    return cb(false);
-  }
+const isItBob = (obj, cb) => {
+  return obj.name === 'Bob' ? cb(true) : cb(false);
 }
 //////////////////PROBLEM 17////////////////////
 /*
@@ -226,7 +217,7 @@ function isItBob(obj, cb) {
 */
 
 //CODE HERE
-function giveMeDoubles(arr, cb) {
+const giveMeDoubles = (arr, cb) => {
   for (let i = 0; i < arr.length; i++) {
     arr[i] *= 2;
   }
@@ -245,7 +236,6 @@ function giveMeDoubles(arr, cb) {
     - else, add a key to the object called isNew and set it to false
       - hint: you can use dot notation or bracket notation
   Last, the function should return the object
-
   For example,
     carFactory('toyota', 'camry', 2020)
   should return an object that looks like this:
@@ -258,16 +248,17 @@ function giveMeDoubles(arr, cb) {
 */
 
 //CODE HERE
-function carFactory(make, model, year) {
-  const car = {
+const carFactory = (make, model, year) => {
+  const obj = {
     make: make,
     model: model,
     year: year
-  };
-  if(year > 2018){
-    car.isNew = true;
-  } else {
-    car.isNew = false;
   }
-  return car;
+
+  if (obj.year > 2018) {
+    obj.isNew = true;
+  } else {
+    obj.isNew = false;
+  }
+  return obj;
 }
